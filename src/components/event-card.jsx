@@ -6,7 +6,7 @@ const EventCard = ({ event }) => (
     <div><img 
       src={event.image} 
       alt={event.name} 
-      className="w-40 h-full object-cover rounded mb-4"/>
+      className="size-full object-cover rounded mb-4"/>
       </div>
     
   </div>
