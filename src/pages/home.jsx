@@ -1,4 +1,5 @@
 const Home = () => (
+  <div className="flex items-center justify-between">
   <div className="p-[18px] bg-[linear-gradient(to right, red, blue)]">
   <div className="p-50">
     <h1 className="text-4xl font-bold mb-4 bg-my_teal">Welcome to Out Youth Center!</h1>
@@ -7,6 +8,7 @@ const Home = () => (
       and thrive
     </p>
   </div>
+</div>
 </div>
  
 );

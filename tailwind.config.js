@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     extend: {
-      colors: 
-      {my_teal : '#00808'}
+      // colors: 
+      // {my_teal : '#00808'}
     },
     container: {
       center: true,
