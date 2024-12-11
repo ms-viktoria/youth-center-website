@@ -1,0 +1,10 @@
+{
+  "events": [
+    {
+      "name": "Yoga",
+      "description": "Flexibility and relax.",
+      "schedule": "Every Monday",
+      "image": "../src/assets/images/yoga.jpg"
+    }
+  ]
+}
