@@ -12,13 +12,12 @@ const Home = () => {
 
   return (
     <div className="home">
-      <p>
+      <p className="home__about">
         Welcome to our Youth Center. We offer various programs and activities to
         help young people grow, learn, and thrive.Explore our events,
         activities, and community programs.
       </p>
-      {/*<img src={Title} alt="Youth Center Title" className="image" />*/}
-      <div className="event-section">
+      <div className="event-grid">
         {events.map((event, index) => (
           <EventCard key={index} event={event} />
         ))}

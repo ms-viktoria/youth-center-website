@@ -3,8 +3,62 @@
     {
       "name": "Yoga",
       "description": "Flexibility and relax.",
-      "schedule": "Every Monday",
+      "schedule": "Monday 10:00",
       "image": "../src/assets/images/yoga.jpg"
+    },
+    {
+      "name": "Psychological group",
+      "description": "Lifestyle topics.",
+      "schedule": "Monday 14:00",
+      "image": "../src/assets/images/psychological.jpg"
+    },
+    {
+      "name": "Football",
+      "description": "Outside game for children.",
+      "schedule": "Tuesday 15:00",
+      "image": "../src/assets/images/football.jpg"
+    },
+    {
+      "name": "Coffee with psychologist ",
+      "description": "Group conversation.",
+      "schedule": "Wednesday 13:00",
+      "image": "../src/assets/images/coffee.jpg"
+    },
+    {
+      "name": "Power fitness",
+      "description": "To build stronger, healthier bodies & minds.",
+      "schedule": "Wednesday 11:00",
+      "image": "../src/assets/images/power.webp"
+    },
+    {
+      "name": "Art classes",
+      "description": "Learn painting and drawing.",
+      "schedule": "Thursday 14:00",
+      "image": "../src/assets/images/art.jpg"
+    },
+    {
+      "name": "Speaking club",
+      "description": "Learn English with us.",
+      "schedule": "Thursday 14:00",
+      "image": "../src/assets/images/speaking.png"
+    },
+    {
+      "name": "Ping-pong",
+      "description": "Support the cardiovascular system and improve reflexes.",
+      "schedule": "Friday 18:00",
+      "image": "../src/assets/images/ping_pong.jpg"
+    },
+    {
+      "name": "Board game",
+      "description": "Top 5 - chess, checkers, backgammon, Monopoly, and Scrabble.",
+      "schedule": "Friday 19:00",
+      "image": "../src/assets/images/board_game.webp"
+    },
+    {
+      "name": "Cash Flow",
+      "description": "Support the cardiovascular system and improve reflexes.",
+      "schedule": "Saturday 15:00",
+      "image": "../src/assets/images/cash.png"
     }
   ]
 }
