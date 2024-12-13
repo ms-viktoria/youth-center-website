@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import EventCard, { Event } from "../components/Event";
+import MediaCard from "../components/Modal.tsx";
 
 const Home = () => {
   const [events, setEvents] = useState<Event[]>([]);
@@ -22,6 +23,7 @@ const Home = () => {
           <EventCard key={index} event={event} />
         ))}
       </div>
+      <MediaCard />
     </div>
   );
 };
