@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import EventCard, { Event } from "../components/Event";
-import MediaCard from "../components/Modal.tsx";
+import EventCard, { Event } from "../components/EventCard.tsx";
+import axios from "axios";
 
 const Home = () => {
   const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/events")
-      .then((response) => response.json())
-      .then((data) => setEvents(data));
+    axios
+      .get("http://localhost:5001/events")
+      .then((response) => setEvents(response.data))
+      .catch((error) => console.error("Error fetching events:", error));
   }, []);
 
   return (
@@ -23,7 +24,6 @@ const Home = () => {
           <EventCard key={index} event={event} />
         ))}
       </div>
-      <MediaCard />
     </div>
   );
 };

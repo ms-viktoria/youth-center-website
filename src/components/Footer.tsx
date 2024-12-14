@@ -1,6 +1,6 @@
 const Footer = () => (
     <footer>
-        © 2022 Suceava Youth Centre.
+        © 2022 Youth Centre.
     </footer>
 );
 

@@ -2,7 +2,7 @@ import Home from "./pages/Home.tsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer.tsx";
-import Event from "./components/Event.tsx";
+import Event from "./components/OldEventCard.tsx";
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
               event={{
                 name: "",
                 description: "",
-                schedule: "",
+                time: "",
                 image: "",
               }}
             />
