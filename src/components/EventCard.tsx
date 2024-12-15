@@ -6,21 +6,15 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import BookingModal from "./BookingModal.tsx";
 import { useState } from "react";
-
-export type Event = {
-  name: string;
-  description: string;
-  time: string;
-  image: string;
-  participants: string[];
-};
+import { Event } from "../types/event.ts"
 
 interface EventCardProps {
   event: Event;
+  updateParticipants: (event: Event, participantNane: string) => void;
 }
 
-export default function EventCard({ event }: EventCardProps) {
-  const { name, description, time, image } = event;
+export default function EventCard({ event, updateParticipants }: EventCardProps) {
+  const { title, description, time, image, participants } = event;
   const [open, setOpen] = useState<boolean>(false);
 
   const handleOpen = () => setOpen(true);
@@ -28,10 +22,10 @@ export default function EventCard({ event }: EventCardProps) {
 
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia sx={{ height: 140 }} image={image} title={name} />
+      <CardMedia sx={{ height: 140 }} image={image} title={title} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {name}
+          {title}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           {description}
@@ -39,13 +33,16 @@ export default function EventCard({ event }: EventCardProps) {
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           {time}
         </Typography>
+        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          {participants.map(p => p.name).join(', ')}
+        </Typography>
       </CardContent>
       <CardActions>
         <Button variant="contained" onClick={handleOpen}>
-          Open Modal
+          Book Now
         </Button>
       </CardActions>
-      <BookingModal open={open} onClose={handleClose} name={name} time={time} />
+      <BookingModal open={open} onClose={handleClose} event={event} updateParticipants={updateParticipants}/>
     </Card>
   );
 }
