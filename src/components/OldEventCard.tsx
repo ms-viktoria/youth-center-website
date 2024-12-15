@@ -1,7 +1,7 @@
 export type Event = {
   name: string;
   description: string;
-  schedule: string;
+  time: string;
   image: string;
 };
 
@@ -9,17 +9,17 @@ interface EventCardProps {
   event: Event;
 }
 
-const EventCard = ({ event }: EventCardProps) => {
-  const { name, description, schedule, image } = event;
+const OldEventCard = ({ event }: EventCardProps) => {
+  const { name, description, time, image } = event;
 
   return (
     <div className="event-card">
-      <img src={image} alt={name} className={image} />
+      <img src={image} alt={name} className="event-card__image" />
       <h3 className="event-card__name">{name}</h3>
       <p className="event-card__description">{description}</p>
-      <p className="event-card__schedule">{schedule}</p>
+      <p className="event-card__time">{time}</p>
     </div>
   );
 };
 
-export default EventCard;
+export default OldEventCard;

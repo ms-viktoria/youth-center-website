@@ -1,10 +1,93 @@
 {
   "events": [
     {
-      "name": "Yoga",
+      "id": "1",
+      "title": "Yoga",
       "description": "Flexibility and relax.",
-      "schedule": "Every Monday",
-      "image": "../src/assets/images/yoga.jpg"
+      "time": "Monday 10:00",
+      "image": "../src/assets/images/yoga.jpg",
+      "participants": []
+    },
+    {
+      "id": "2",
+      "title": "Psychological group",
+      "description": "Lifestyle topics.",
+      "time": "Monday 14:00",
+      "image": "../src/assets/images/psychological.jpg",
+      "participants": [
+        {
+          "id": 1734279940657,
+          "name": "Viktoria"
+        },
+        {
+          "id": 1734279996384,
+          "name": "George"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Football",
+      "description": "Outside game for children.",
+      "time": "Tuesday 15:00",
+      "image": "../src/assets/images/football.jpg",
+      "participants": []
+    },
+    {
+      "id": "4",
+      "title": "Coffee with psychologist ",
+      "description": "Group conversation.",
+      "time": "Wednesday 13:00",
+      "image": "../src/assets/images/coffee.jpg",
+      "participants": []
+    },
+    {
+      "id": "5",
+      "title": "Power fitness",
+      "description": "To build stronger, healthier bodies & minds.",
+      "time": "Wednesday 11:00",
+      "image": "../src/assets/images/power.webp",
+      "participants": []
+    },
+    {
+      "id": "6",
+      "title": "Art classes",
+      "description": "Learn painting and drawing.",
+      "time": "Thursday 14:00",
+      "image": "../src/assets/images/art.jpg",
+      "participants": []
+    },
+    {
+      "id": "7",
+      "title": "Speaking club",
+      "description": "Learn English with us.",
+      "time": "Thursday 14:00",
+      "image": "../src/assets/images/speaking.png",
+      "participants": []
+    },
+    {
+      "id": "8",
+      "title": "Ping-pong",
+      "description": "Support the cardiovascular system and improve reflexes.",
+      "time": "Friday 18:00",
+      "image": "../src/assets/images/ping_pong.jpg",
+      "participants": []
+    },
+    {
+      "id": "9",
+      "title": "Board game",
+      "description": "Top 5 - chess, checkers, backgammon, Monopoly, and Scrabble.",
+      "time": "Friday 19:00",
+      "image": "../src/assets/images/board_game.webp",
+      "participants": []
+    },
+    {
+      "id": "10",
+      "title": "Cash Flow",
+      "description": "Support the cardiovascular system and improve reflexes.",
+      "time": "Saturday 15:00",
+      "image": "../src/assets/images/cash.png",
+      "participants": []
     }
   ]
 }

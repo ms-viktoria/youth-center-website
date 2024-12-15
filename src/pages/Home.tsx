@@ -1,26 +1,53 @@
 import { useEffect, useState } from "react";
-import EventCard, { Event } from "../components/Event";
+import EventCard from "../components/EventCard.tsx";
+import axios from "axios";
+import { Event } from "../types/event.ts";
 
 const Home = () => {
   const [events, setEvents] = useState<Event[]>([]);
 
+  const fetchEvents = async () => {
+    try {
+      const response = await axios.get("http://localhost:5001/events");
+      setEvents(response.data);
+    } catch (error) {
+      console.error("Error fetching events:", error);
+    }
+  };
+
   useEffect(() => {
-    fetch("http://localhost:5001/events")
-      .then((response) => response.json())
-      .then((data) => setEvents(data));
+    fetchEvents();
   }, []);
+
+  const updateParticipants = async (event: Event, participantName: string) => {
+    const { id, participants } = event;
+    const newParticipant = {
+      id: new Date().getTime(),
+      name: participantName,
+    };
+    const newEvent = {
+      ...event,
+      participants: [...participants, newParticipant],
+    };
+
+    try {
+      await axios.patch(`http://localhost:5001/events/${id}`, newEvent);
+      fetchEvents();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="home">
-      <p>
+      <p className="home__about">
         Welcome to our Youth Center. We offer various programs and activities to
         help young people grow, learn, and thrive.Explore our events,
         activities, and community programs.
       </p>
-      {/*<img src={Title} alt="Youth Center Title" className="image" />*/}
-      <div className="event-section">
+      <div className="event-grid">
         {events.map((event, index) => (
-          <EventCard key={index} event={event} />
+          <EventCard key={index} event={event} updateParticipants={updateParticipants}/>
         ))}
       </div>
     </div>
