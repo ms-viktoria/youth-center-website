@@ -1,72 +1,91 @@
 {
   "events": [
     {
-      "name": "Yoga",
+      "id": "1",
+      "title": "Yoga",
       "description": "Flexibility and relax.",
-      "schedule": "Monday 10:00",
+      "time": "Monday 10:00",
       "image": "../src/assets/images/yoga.jpg",
       "participants": []
     },
     {
-      "name": "Psychological group",
+      "id": "2",
+      "title": "Psychological group",
       "description": "Lifestyle topics.",
-      "schedule": "Monday 14:00",
+      "time": "Monday 14:00",
       "image": "../src/assets/images/psychological.jpg",
-      "participants": []
+      "participants": [
+        {
+          "id": 1734279940657,
+          "name": "Viktoria"
+        },
+        {
+          "id": 1734279996384,
+          "name": "George"
+        }
+      ]
     },
     {
-      "name": "Football",
+      "id": "3",
+      "title": "Football",
       "description": "Outside game for children.",
-      "schedule": "Tuesday 15:00",
+      "time": "Tuesday 15:00",
       "image": "../src/assets/images/football.jpg",
       "participants": []
     },
     {
-      "name": "Coffee with psychologist ",
+      "id": "4",
+      "title": "Coffee with psychologist ",
       "description": "Group conversation.",
-      "schedule": "Wednesday 13:00",
+      "time": "Wednesday 13:00",
       "image": "../src/assets/images/coffee.jpg",
       "participants": []
     },
     {
-      "name": "Power fitness",
+      "id": "5",
+      "title": "Power fitness",
       "description": "To build stronger, healthier bodies & minds.",
-      "schedule": "Wednesday 11:00",
+      "time": "Wednesday 11:00",
       "image": "../src/assets/images/power.webp",
       "participants": []
     },
     {
-      "name": "Art classes",
+      "id": "6",
+      "title": "Art classes",
       "description": "Learn painting and drawing.",
-      "schedule": "Thursday 14:00",
+      "time": "Thursday 14:00",
       "image": "../src/assets/images/art.jpg",
       "participants": []
     },
     {
-      "name": "Speaking club",
+      "id": "7",
+      "title": "Speaking club",
       "description": "Learn English with us.",
-      "schedule": "Thursday 14:00",
+      "time": "Thursday 14:00",
       "image": "../src/assets/images/speaking.png",
       "participants": []
     },
     {
-      "name": "Ping-pong",
+      "id": "8",
+      "title": "Ping-pong",
       "description": "Support the cardiovascular system and improve reflexes.",
-      "schedule": "Friday 18:00",
+      "time": "Friday 18:00",
       "image": "../src/assets/images/ping_pong.jpg",
       "participants": []
     },
     {
-      "name": "Board game",
+      "id": "9",
+      "title": "Board game",
       "description": "Top 5 - chess, checkers, backgammon, Monopoly, and Scrabble.",
-      "schedule": "Friday 19:00",
+      "time": "Friday 19:00",
       "image": "../src/assets/images/board_game.webp",
       "participants": []
     },
     {
-      "name": "Cash Flow",
+      "id": "10",
+      "title": "Cash Flow",
       "description": "Support the cardiovascular system and improve reflexes.",
-      "schedule": "Saturday 15:00",
+      "time": "Saturday 15:00",
       "image": "../src/assets/images/cash.png",
       "participants": []
     }

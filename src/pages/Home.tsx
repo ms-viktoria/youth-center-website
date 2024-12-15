@@ -1,15 +1,42 @@
 import { useEffect, useState } from "react";
-import EventCard, { Event } from "../components/Event";
-import MediaCard from "../components/Modal.tsx";
+import EventCard from "../components/EventCard.tsx";
+import axios from "axios";
+import { Event } from "../types/event.ts";
 
 const Home = () => {
   const [events, setEvents] = useState<Event[]>([]);
 
+  const fetchEvents = async () => {
+    try {
+      const response = await axios.get("http://localhost:5001/events");
+      setEvents(response.data);
+    } catch (error) {
+      console.error("Error fetching events:", error);
+    }
+  };
+
   useEffect(() => {
-    fetch("http://localhost:5001/events")
-      .then((response) => response.json())
-      .then((data) => setEvents(data));
+    fetchEvents();
   }, []);
+
+  const updateParticipants = async (event: Event, participantName: string) => {
+    const { id, participants } = event;
+    const newParticipant = {
+      id: new Date().getTime(),
+      name: participantName,
+    };
+    const newEvent = {
+      ...event,
+      participants: [...participants, newParticipant],
+    };
+
+    try {
+      await axios.patch(`http://localhost:5001/events/${id}`, newEvent);
+      fetchEvents();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="home">
@@ -20,10 +47,9 @@ const Home = () => {
       </p>
       <div className="event-grid">
         {events.map((event, index) => (
-          <EventCard key={index} event={event} />
+          <EventCard key={index} event={event} updateParticipants={updateParticipants}/>
         ))}
       </div>
-      <MediaCard />
     </div>
   );
 };
