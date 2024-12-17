@@ -1,0 +1,30 @@
+.booking-modal {
+  &__close-button {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    top: 12px;
+    right: 8px;
+  }
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &__title {
+    width: 100%;
+    text-align: left;
+  }
+
+  &__time {
+    width: 100%;
+    text-align: right;
+  }
+}

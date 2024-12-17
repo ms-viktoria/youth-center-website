@@ -37,8 +37,8 @@ export default function EventCard({ event, updateParticipants }: EventCardProps)
           {participants.map(p => p.name).join(', ')}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button variant="contained" onClick={handleOpen}>
+      <CardActions className="button">
+        <Button className="button__book" onClick={handleOpen}>
           Book Now
         </Button>
       </CardActions>

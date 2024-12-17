@@ -22,6 +22,22 @@
         {
           "id": 1734279996384,
           "name": "George"
+        },
+        {
+          "id": 1734430966684,
+          "name": ""
+        },
+        {
+          "id": 1734430968252,
+          "name": ""
+        },
+        {
+          "id": 1734430970996,
+          "name": ""
+        },
+        {
+          "id": 1734432432084,
+          "name": ""
         }
       ]
     },
@@ -31,7 +47,12 @@
       "description": "Outside game for children.",
       "time": "Tuesday 15:00",
       "image": "../src/assets/images/football.jpg",
-      "participants": []
+      "participants": [
+        {
+          "id": 1734364345247,
+          "name": ""
+        }
+      ]
     },
     {
       "id": "4",

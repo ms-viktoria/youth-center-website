@@ -40,9 +40,9 @@ const Home = () => {
 
   return (
     <div className="home">
-      <p className="home__about">
-        Welcome to our Youth Center. We offer various programs and activities to
-        help young people grow, learn, and thrive.Explore our events,
+      <p className="home__about" style={{padding: "2%", color:"darkslategrey", textTransform: "uppercase", textAlign: "center"}}>
+        Welcome to our Youth Center. <p>We offer various programs and activities to
+        help young people grow, learn, and thrive.</p> Explore our events,
         activities, and community programs.
       </p>
       <div className="event-grid">

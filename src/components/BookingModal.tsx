@@ -7,7 +7,7 @@ import { Event } from "../types/event.ts";
 import { useState } from "react";
 
 const modalStyle = {
-  position: "absolute" as const,
+  position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
@@ -41,28 +41,32 @@ export default function BookingModal({
   return (
     <Modal open={open} onClose={onClose}>
       <Box sx={modalStyle}>
-        <div>
-          <Typography gutterBottom variant="h5" component="div">
-            {title}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            {time}
-          </Typography>
+        <div className="booking-modal">
+          <span className="booking-modal__close-button" onClick={onClose}>✘</span>
+          <div className="box">
+            <Typography className="box__title" gutterBottom variant="subtitle1" component="div">
+              {title}
+            </Typography>
+            <Typography className="box__time" gutterBottom variant="subtitle1" component="div">
+              {time}
+            </Typography>
+          </div>
+          <Input
+            style={{
+              height: 40,
+              margin: 12,
+              borderWidth: 1,
+              padding: 10,
+            }}
+            className="modal__placeholder"
+            placeholder="Enter your name..."
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <Button variant="contained" sx={{mt: 2}} onClick={onSubmit}>
+            Submit
+          </Button>
         </div>
-        <Input
-          placeholder="Enter your name..."
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <Typography sx={{ mt: 2 }}>
-          This is a customizable Material-UI modal.
-        </Typography>
-        <Button variant="contained" sx={{ mt: 2 }} onClick={onClose}>
-          Close
-        </Button>
-        <Button variant="contained" sx={{ mt: 2 }} onClick={onSubmit}>
-          Submit
-        </Button>
       </Box>
     </Modal>
   );
