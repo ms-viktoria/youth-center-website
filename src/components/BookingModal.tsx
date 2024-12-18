@@ -1,5 +1,4 @@
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Input from "@mui/material/Input";
@@ -42,12 +41,24 @@ export default function BookingModal({
     <Modal open={open} onClose={onClose}>
       <Box sx={modalStyle}>
         <div className="booking-modal">
-          <span className="booking-modal__close-button" onClick={onClose}>✘</span>
+          <span className="booking-modal__close-button" onClick={onClose}>
+            ×
+          </span>
           <div className="box">
-            <Typography className="box__title" gutterBottom variant="subtitle1" component="div">
+            <Typography
+              className="box__title"
+              gutterBottom
+              variant="subtitle1"
+              component="div"
+            >
               {title}
             </Typography>
-            <Typography className="box__time" gutterBottom variant="subtitle1" component="div">
+            <Typography
+              className="box__time"
+              gutterBottom
+              variant="subtitle1"
+              component="div"
+            >
               {time}
             </Typography>
           </div>
@@ -63,9 +74,29 @@ export default function BookingModal({
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <Button variant="contained" sx={{mt: 2}} onClick={onSubmit}>
-            Submit
-          </Button>
+          <input className="modal__age"
+                 type="number"
+                 id="age"
+                 name="age"
+                 min="1"
+                 max="120"
+                 placeholder="Age"
+                 required
+          />
+          <Input className="modal__phone"
+                 type="tel"
+                 id="phone"
+                 name="phone"
+                 placeholder="123-456-7890"
+                 required
+          />
+
+
+          <div className="booking-modal">
+            <span className="booking-modal__submit-button" onClick={onSubmit}>
+              Submit
+            </span>
+          </div>
         </div>
       </Box>
     </Modal>

@@ -1,0 +1,25 @@
+.user-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.user-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #333333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+
+.user-icon.extra {
+  background-color: #6c757d;
+}

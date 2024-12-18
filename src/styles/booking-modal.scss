@@ -1,11 +1,38 @@
 .booking-modal {
+  padding: 8px 10px 10px 8px;
+  position: static;
+
   &__close-button {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
     top: 12px;
-    right: 8px;
+    right: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 4px 0px rgba(0, 0, 0, 0.1);
+    padding: 4px 5px;
+    font-size: 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: brown;
+      box-shadow: 2px 4px 0px rgba(225, 0, 0, 0.1);
+    }
+  }
+
+  &__submit-button {
+    position: absolute;
+    bottom: 20px;
+    right: 5%;
+    border-radius: 10px;
+    box-shadow: 2px 4px 0px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    color: midnightblue;
+    cursor: pointer;
+
+    &:hover {
+      color: mediumblue;
+      box-shadow: 2px 4px 0px rgba(0, 0, 225, 0.1);
+    }
+
   }
 }
 
@@ -19,12 +46,27 @@
   cursor: pointer;
 
   &__title {
+    font-size: 1.2rem;
     width: 100%;
     text-align: left;
   }
+}
 
-  &__time {
-    width: 100%;
-    text-align: right;
-  }
+.modal{
+
+&__age {
+    border: none;
+  border-block-end: 1px solid gray;
+  writing-mode: horizontal-tb;
+  height: 40px;
+  margin: 12px;font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  color: rgba(0, 0, 0, 0.87);
+  box-sizing: border-box;
+  display: inline-flex;
+
+}
+
 }

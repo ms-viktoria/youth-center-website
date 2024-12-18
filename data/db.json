@@ -16,28 +16,24 @@
       "image": "../src/assets/images/psychological.jpg",
       "participants": [
         {
-          "id": 1734279940657,
-          "name": "Viktoria"
+          "id": 1734540822658,
+          "name": "Name"
         },
         {
-          "id": 1734279996384,
-          "name": "George"
+          "id": 1734549222388,
+          "name": "Last Name"
         },
         {
-          "id": 1734430966684,
-          "name": ""
+          "id": 1734549242198,
+          "name": "First Name"
         },
         {
-          "id": 1734430968252,
-          "name": ""
+          "id": 1734549256254,
+          "name": "User Name"
         },
         {
-          "id": 1734430970996,
-          "name": ""
-        },
-        {
-          "id": 1734432432084,
-          "name": ""
+          "id": 1734549270370,
+          "name": "Real Name"
         }
       ]
     },
@@ -47,12 +43,7 @@
       "description": "Outside game for children.",
       "time": "Tuesday 15:00",
       "image": "../src/assets/images/football.jpg",
-      "participants": [
-        {
-          "id": 1734364345247,
-          "name": ""
-        }
-      ]
+      "participants": []
     },
     {
       "id": "4",

@@ -11,18 +11,30 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
-
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
+  cursor: pointer;
+
+
+
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+  }
+
+  &__participants {
+    font-size: 1.2rem;
+
+  }
 
   &__image {
     width: 100%;
     height: 150px;
     object-fit: cover;
     margin-top: 20px;
+    transition: transform 0.3s ease;
   }
 
   &__title {
@@ -32,13 +44,20 @@
   }
 
   &__description {
+    margin-top: 0.5rem;
     font-size: 0.9rem;
-    margin: 10px 0;
   }
 
-  &__schedule {
-    font-size: 0.9rem;
-    margin: 10px 0;
+  &__time {
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__user-icons {
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
   }
 }
 
