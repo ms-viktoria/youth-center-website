@@ -16,10 +16,10 @@ const UserIcons: React.FC<{ users: User[] }> = ({ users }) => {
   };
 
   const generateRandomColor = () => {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i <= 6; i++) {
-      color += letters[Math.floor(Math.random() * letters.length)];
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
   };
@@ -29,13 +29,13 @@ const UserIcons: React.FC<{ users: User[] }> = ({ users }) => {
       {visibleUsers.map((user, index) => (
         <div
           key={index}
-          className="user-icon"
+          className="user-icons__item"
           style={{ backgroundColor: generateRandomColor() }}
         >
           {getInitials(user.name)}
         </div>
       ))}
-      {extraCount > 0 && <div className="user-icon extra">+{extraCount}</div>}
+      {extraCount > 0 && <div className="user-icons__item user-icons__item--extra">+{extraCount}</div>}
     </div>
   );
 };

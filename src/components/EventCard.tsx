@@ -19,11 +19,13 @@ const EventCard = ({ event, updateParticipants }: EventCardProps) => {
   return (
     <>
       <div className="event-card" onClick={handleOpen}>
-        <img src={image} alt={title} className="event-card__image"/>
         <h3 className="event-card__name">{title}</h3>
-        <p className="event-card__description">{description}</p>
-        <p className="event-card__time">{time}</p>
         <UserIcons users={participants} />
+        <img src={image} alt={title} className="event-card__image" />
+
+        <p className="event-card__time">{time}</p>
+        <p className="event-card__description">{description}</p>
+
       </div>
 
       <BookingModal

@@ -5,8 +5,37 @@
       "title": "Yoga",
       "description": "Flexibility and relax.",
       "time": "Monday 10:00",
-      "image": "../src/assets/images/yoga.jpg",
-      "participants": []
+      "image": "../src/assets/images/yoga.webp",
+      "participants": [
+        {
+          "id": 1734540822658,
+          "name": "Name"
+        },
+        {
+          "id": 1734549222388,
+          "name": "Last Name"
+        },
+        {
+          "id": 1734549242198,
+          "name": "First Name"
+        },
+        {
+          "id": 1734549256254,
+          "name": "User Name"
+        },
+        {
+          "id": 1734549270370,
+          "name": "Real Name"
+        },
+        {
+          "id": 1734605265579,
+          "name": ""
+        },
+        {
+          "id": 1734605517446,
+          "name": ""
+        }
+      ]
     },
     {
       "id": "2",
@@ -34,6 +63,22 @@
         {
           "id": 1734549270370,
           "name": "Real Name"
+        },
+        {
+          "id": 1734605007088,
+          "name": ""
+        },
+        {
+          "id": 1734605112420,
+          "name": ""
+        },
+        {
+          "id": 1734605175489,
+          "name": ""
+        },
+        {
+          "id": 1734605185601,
+          "name": ""
         }
       ]
     },
@@ -43,31 +88,115 @@
       "description": "Outside game for children.",
       "time": "Tuesday 15:00",
       "image": "../src/assets/images/football.jpg",
-      "participants": []
+      "participants": [
+        {
+          "id": 1734540822658,
+          "name": "Name"
+        },
+        {
+          "id": 1734549222388,
+          "name": "Last Name"
+        },
+        {
+          "id": 1734549242198,
+          "name": "First Name"
+        },
+        {
+          "id": 1734549256254,
+          "name": "User Name"
+        },
+        {
+          "id": 1734549270370,
+          "name": "Real Name"
+        }
+      ]
     },
     {
       "id": "4",
       "title": "Coffee with psychologist ",
       "description": "Group conversation.",
       "time": "Wednesday 13:00",
-      "image": "../src/assets/images/coffee.jpg",
-      "participants": []
+      "image": "../src/assets/images/coffee.jpeg",
+      "participants": [
+        {
+          "id": 1734540822658,
+          "name": "Name"
+        },
+        {
+          "id": 1734549222388,
+          "name": "Last Name"
+        },
+        {
+          "id": 1734549242198,
+          "name": "First Name"
+        },
+        {
+          "id": 1734549256254,
+          "name": "User Name"
+        },
+        {
+          "id": 1734549270370,
+          "name": "Real Name"
+        }
+      ]
     },
     {
       "id": "5",
       "title": "Power fitness",
       "description": "To build stronger, healthier bodies & minds.",
       "time": "Wednesday 11:00",
-      "image": "../src/assets/images/power.webp",
-      "participants": []
+      "image": "../src/assets/images/power.jpg",
+      "participants": [
+        {
+          "id": 1734540822658,
+          "name": "Name"
+        },
+        {
+          "id": 1734549222388,
+          "name": "Last Name"
+        },
+        {
+          "id": 1734549242198,
+          "name": "First Name"
+        },
+        {
+          "id": 1734549256254,
+          "name": "User Name"
+        },
+        {
+          "id": 1734549270370,
+          "name": "Real Name"
+        }
+      ]
     },
     {
       "id": "6",
       "title": "Art classes",
       "description": "Learn painting and drawing.",
       "time": "Thursday 14:00",
-      "image": "../src/assets/images/art.jpg",
-      "participants": []
+      "image": "../src/assets/images/art.avif",
+      "participants": [
+        {
+          "id": 1734540822658,
+          "name": "Name"
+        },
+        {
+          "id": 1734549222388,
+          "name": "Last Name"
+        },
+        {
+          "id": 1734549242198,
+          "name": "First Name"
+        },
+        {
+          "id": 1734549256254,
+          "name": "User Name"
+        },
+        {
+          "id": 1734549270370,
+          "name": "Real Name"
+        }
+      ]
     },
     {
       "id": "7",
@@ -75,7 +204,28 @@
       "description": "Learn English with us.",
       "time": "Thursday 14:00",
       "image": "../src/assets/images/speaking.png",
-      "participants": []
+      "participants": [
+        {
+          "id": 1734540822658,
+          "name": "Name"
+        },
+        {
+          "id": 1734549222388,
+          "name": "Last Name"
+        },
+        {
+          "id": 1734549242198,
+          "name": "First Name"
+        },
+        {
+          "id": 1734549256254,
+          "name": "User Name"
+        },
+        {
+          "id": 1734549270370,
+          "name": "Real Name"
+        }
+      ]
     },
     {
       "id": "8",
@@ -83,23 +233,86 @@
       "description": "Support the cardiovascular system and improve reflexes.",
       "time": "Friday 18:00",
       "image": "../src/assets/images/ping_pong.jpg",
-      "participants": []
+      "participants": [
+        {
+          "id": 1734540822658,
+          "name": "Name"
+        },
+        {
+          "id": 1734549222388,
+          "name": "Last Name"
+        },
+        {
+          "id": 1734549242198,
+          "name": "First Name"
+        },
+        {
+          "id": 1734549256254,
+          "name": "User Name"
+        },
+        {
+          "id": 1734549270370,
+          "name": "Real Name"
+        }
+      ]
     },
     {
       "id": "9",
       "title": "Board game",
       "description": "Top 5 - chess, checkers, backgammon, Monopoly, and Scrabble.",
       "time": "Friday 19:00",
-      "image": "../src/assets/images/board_game.webp",
-      "participants": []
+      "image": "../src/assets/images/board_game.jpeg",
+      "participants": [
+        {
+          "id": 1734540822658,
+          "name": "Name"
+        },
+        {
+          "id": 1734549222388,
+          "name": "Last Name"
+        },
+        {
+          "id": 1734549242198,
+          "name": "First Name"
+        },
+        {
+          "id": 1734549256254,
+          "name": "User Name"
+        },
+        {
+          "id": 1734549270370,
+          "name": "Real Name"
+        }
+      ]
     },
     {
       "id": "10",
       "title": "Cash Flow",
       "description": "Support the cardiovascular system and improve reflexes.",
       "time": "Saturday 15:00",
-      "image": "../src/assets/images/cash.png",
-      "participants": []
+      "image": "../src/assets/images/cash.jpeg",
+      "participants": [
+        {
+          "id": 1734540822658,
+          "name": "Name"
+        },
+        {
+          "id": 1734549222388,
+          "name": "Last Name"
+        },
+        {
+          "id": 1734549242198,
+          "name": "First Name"
+        },
+        {
+          "id": 1734549256254,
+          "name": "User Name"
+        },
+        {
+          "id": 1734549270370,
+          "name": "Real Name"
+        }
+      ]
     }
   ]
 }

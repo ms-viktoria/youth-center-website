@@ -1,5 +1,4 @@
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Input from "@mui/material/Input";
 import { Event } from "../types/event.ts";
@@ -32,11 +31,23 @@ export default function BookingModal({
 }: BookingModalProps) {
   const { title, time } = event;
   const [name, setName] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
 
-  const onSubmit = () => {
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(event.target.checked);
+  };
+
+  const handleButtonClick = () => {
     updateParticipants(event, name);
     onClose();
+
+    if (isChecked) {
+      alert("You will be remembered!");
+    } else {
+      alert("You will not be remembered!");
+    }
   };
+
   return (
     <Modal open={open} onClose={onClose}>
       <Box sx={modalStyle}>
@@ -45,22 +56,8 @@ export default function BookingModal({
             ×
           </span>
           <div className="box">
-            <Typography
-              className="box__title"
-              gutterBottom
-              variant="subtitle1"
-              component="div"
-            >
-              {title}
-            </Typography>
-            <Typography
-              className="box__time"
-              gutterBottom
-              variant="subtitle1"
-              component="div"
-            >
-              {time}
-            </Typography>
+            <div className="box__title">{title}</div>
+            <div className="box__time">{time}</div>
           </div>
           <Input
             style={{
@@ -74,28 +71,55 @@ export default function BookingModal({
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <input className="modal__age"
-                 type="number"
-                 id="age"
-                 name="age"
-                 min="1"
-                 max="120"
-                 placeholder="Age"
-                 required
-          />
-          <Input className="modal__phone"
-                 type="tel"
-                 id="phone"
-                 name="phone"
-                 placeholder="123-456-7890"
-                 required
+          <input
+            className="modal__age"
+            type="number"
+            id="age"
+            name="age"
+            min="1"
+            max="120"
+            placeholder="Age"
+            required
           />
 
-
+          <input
+            className="modal__phone"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+123-456-7890"
+            required
+          />
+          <input
+            className="modal__gender"
+            type="radio"
+            id="gender"
+            name="gender"
+            placeholder="gender"
+            required
+          />
           <div className="booking-modal">
-            <span className="booking-modal__submit-button" onClick={onSubmit}>
+            <span
+              className="booking-modal__submit-button"
+              onClick={handleButtonClick}
+            >
               Submit
             </span>
+            <div
+              className="remember-me"
+            >
+              <label
+                className="remember-me__field"
+              >
+                <input
+                  className="remember-me__checkbox"
+                  type="checkbox"
+                  checked={isChecked}
+                  onChange={handleCheckboxChange}
+                />
+                Remember Me
+              </label>
+            </div>
           </div>
         </div>
       </Box>

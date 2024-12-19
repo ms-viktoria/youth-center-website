@@ -1,25 +1,34 @@
 .user-icons {
+  object-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
-}
+  font: 14px sans-serif;
+  font-size: 1.4rem;
+  width: 100%;
 
-.user-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #333333;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: bold;
-  margin-right: 5px;
-  text-transform: uppercase;
-}
 
-.user-icon.extra {
-  background-color: #6c757d;
+  &__item {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    margin-right: 5px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+         transform: scale(1.5);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &--extra {
+      background-color: rgba(151, 76, 154, 0.2);
+    }
+  }
 }

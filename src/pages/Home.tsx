@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import EventCard from "../components/EventCard.tsx";
 import axios from "axios";
 import { Event } from "../types/event.ts";
@@ -40,14 +40,30 @@ const Home = () => {
 
   return (
     <div className="home">
-      <p className="home__about" style={{padding: "2%", color:"darkslategrey", textTransform: "uppercase", textAlign: "center"}}>
-        Welcome to our Youth Center. <p>We offer various programs and activities to
-        help young people grow, learn, and thrive.</p> Explore our events,
-        activities, and community programs.
+      <p
+        className="home__about"
+        style={{
+          padding: "2%",
+          color: "darkslategrey",
+          textTransform: "uppercase",
+          textAlign: "center",
+        }}
+      >
+        Welcome to our Youth Center.{" "}
+        <p>
+          We offer various programs and activities to help young people grow,
+          learn, and thrive.
+        </p>{" "}
+        Explore our events, activities, and community programs.
       </p>
       <div className="event-grid">
         {events.map((event, index) => (
-          <EventCard key={index} event={event} updateParticipants={updateParticipants}/>
+          <EventCard
+            key={index}
+            event={event}
+            updateParticipants={updateParticipants}
+            users={[]}
+          />
         ))}
       </div>
     </div>
