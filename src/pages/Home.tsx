@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import EventCard from "../components/EventCard.tsx";
 import axios from "axios";
 import { Event } from "../types/event.ts";
@@ -39,16 +39,9 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
-      <p
-        className="home__about"
-        style={{
-          padding: "2%",
-          color: "darkslategrey",
-          textTransform: "uppercase",
-          textAlign: "center",
-        }}
-      >
+    <>
+    <div className="home__description-title">
+      <p>
         Welcome to our Youth Center.{" "}
         <p>
           We offer various programs and activities to help young people grow,
@@ -56,6 +49,7 @@ const Home = () => {
         </p>{" "}
         Explore our events, activities, and community programs.
       </p>
+    </div>
       <div className="event-grid">
         {events.map((event, index) => (
           <EventCard
@@ -65,8 +59,9 @@ const Home = () => {
             users={[]}
           />
         ))}
-      </div>
+
     </div>
+    </>
   );
 };
 export default Home;

@@ -5,6 +5,7 @@ interface User {
 }
 
 const UserIcons: React.FC<{ users: User[] }> = ({ users }) => {
+  const colors = ['#32a852', '#8c32a8', '#326fa8', '#a6a832', '#a84a32', '#a660a8', '#60a8a1', '#60a872', '#b9cc0c', '#a1056a','#34a352', '#8c62a8', '#526fb8', '#a6b882', ];
   const maxVisible = 3;
   const visibleUsers = users.slice(0, maxVisible);
   const extraCount = users.length - maxVisible;
@@ -15,14 +16,10 @@ const UserIcons: React.FC<{ users: User[] }> = ({ users }) => {
     return initials.toUpperCase();
   };
 
-  const generateRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
+  const getRandomColor = () => {
+    const randomColor = Math.floor(Math.random() * colors.length);
+    return colors[randomColor];
+  }
 
   return (
     <div className="user-icons">
@@ -30,12 +27,12 @@ const UserIcons: React.FC<{ users: User[] }> = ({ users }) => {
         <div
           key={index}
           className="user-icons__item"
-          style={{ backgroundColor: generateRandomColor() }}
+          style={{ backgroundColor: getRandomColor() }}
         >
           {getInitials(user.name)}
         </div>
       ))}
-      {extraCount > 0 && <div className="user-icons__item user-icons__item--extra">+{extraCount}</div>}
+      {extraCount > 0 && <div className="user-icons__item--extra">+{extraCount}</div>}
     </div>
   );
 };

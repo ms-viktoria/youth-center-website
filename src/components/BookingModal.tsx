@@ -31,21 +31,15 @@ export default function BookingModal({
 }: BookingModalProps) {
   const { title, time } = event;
   const [name, setName] = useState("");
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIsChecked(event.target.checked);
-  };
+  const [gender, setGender] = useState("");
 
   const handleButtonClick = () => {
     updateParticipants(event, name);
     onClose();
+  };
 
-    if (isChecked) {
-      alert("You will be remembered!");
-    } else {
-      alert("You will not be remembered!");
-    }
+  const handleGenderChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setGender(event.target.value);
   };
 
   return (
@@ -55,71 +49,60 @@ export default function BookingModal({
           <span className="booking-modal__close-button" onClick={onClose}>
             ×
           </span>
-          <div className="box">
-            <div className="box__title">{title}</div>
-            <div className="box__time">{time}</div>
+          <div className="booking-modal__header">
+            <div className="header__title">{title}</div>
+            <div className="header__time">{time}</div>
           </div>
-          <Input
-            style={{
-              height: 40,
-              margin: 12,
-              borderWidth: 1,
-              padding: 10,
-            }}
-            className="modal__placeholder"
-            placeholder="Enter your name..."
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            className="modal__age"
-            type="number"
-            id="age"
-            name="age"
-            min="1"
-            max="120"
-            placeholder="Age"
-            required
-          />
+          <div className="booking-modal__form">
+            <div className="booking-modal__form-row">
+              <Input
+                className="form-row__input input-name"
+                placeholder="Enter your name..."
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                className="form-row__input input-age"
+                type="number"
+                id="age"
+                name="age"
+                min="1"
+                max="120"
+                placeholder="Age"
+                required
+              />
+            </div>
+            <div className="booking-modal__form-row">
+              <div className="form-row__input input-gender">
+                <label htmlFor="gender">Gender:</label>
+                <select
+                  id="gender"
+                  value={gender}
+                  onChange={handleGenderChange}
+                >
+                  <option value="other">Other</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <input
+                className="form-row__input input-phone"
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+123-456-7890"
+                required
+              />
+            </div>
+          </div>
 
-          <input
-            className="modal__phone"
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="+123-456-7890"
-            required
-          />
-          <input
-            className="modal__gender"
-            type="radio"
-            id="gender"
-            name="gender"
-            placeholder="gender"
-            required
-          />
-          <div className="booking-modal">
-            <span
+          <div className="booking-modal__submit-button-wrapper">
+            <button
               className="booking-modal__submit-button"
               onClick={handleButtonClick}
             >
               Submit
-            </span>
-            <div
-              className="remember-me"
-            >
-              <label
-                className="remember-me__field"
-              >
-                <input
-                  className="remember-me__checkbox"
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={handleCheckboxChange}
-                />
-                Remember Me
-              </label>
-            </div>
+            </button>
           </div>
         </div>
       </Box>

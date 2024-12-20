@@ -1,0 +1,11 @@
+.home{
+  &__description-title{
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.0rem;
+    margin: 10px 0;
+  }
+}
