@@ -42,12 +42,8 @@ const Home = () => {
     <>
     <div className="home__description-title">
       <p>
-        Welcome to our Youth Center.{" "}
-        <p>
-          We offer various programs and activities to help young people grow,
-          learn, and thrive.
-        </p>{" "}
-        Explore our events, activities, and community programs.
+        Welcome to our Youth Center. We offer various programs and activities to help young people grow,
+          learn, and thrive. Explore our events, activities, and community programs.
       </p>
     </div>
       <div className="event-grid">

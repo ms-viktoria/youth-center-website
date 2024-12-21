@@ -8,10 +8,9 @@
   align-items: center;
   color: #fff;
   background-color: rgba(0, 73, 117, 0.69);
-  padding: 0 12px;
-  min-height: 10vh;
+
   border-radius: 20px;
-  margin: 15px 30px;
+  margin: 10px 8px;
 
   &__logo {
     display: flex;
@@ -44,11 +43,20 @@
     padding: 10px;
     background-color: coral;
     color: white;
+  }
 
+  &__title2 {
+    display: flex;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 10px;
 
-    &__subtype {
-
-    }
   }
 }
 

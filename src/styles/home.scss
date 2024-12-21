@@ -1,11 +1,14 @@
 .home{
   &__description-title{
     display: flex;
-    text-transform: uppercase;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
     text-align: center;
-    font-size: 1.0rem;
-    margin: 10px 0;
+    position: fixed;
+    top: 10px;
+    left: 100px;
+    right: 100px;
   }
 }
