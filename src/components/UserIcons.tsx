@@ -1,4 +1,6 @@
 import React from "react";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import HdrAutoIcon from '@mui/icons-material/HdrAuto';
 
 interface User {
   name: string;
@@ -23,14 +25,15 @@ const UserIcons: React.FC<{ users: User[] }> = ({ users }) => {
 
   return (
     <div className="user-icons">
+
       {visibleUsers.map((user, index) => (
-        <div
+        <AccountCircleIcon
           key={index}
           className="user-icons__item"
           style={{ backgroundColor: getRandomColor() }}
         >
           {getInitials(user.name)}
-        </div>
+        </AccountCircleIcon>
       ))}
       {extraCount > 0 && <div className="user-icons__item--extra">+{extraCount}</div>}
     </div>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import EventCard from "../components/EventCard.tsx";
 import axios from "axios";
 import { Event } from "../types/event.ts";
+// import LoginSingUp from "../components/LoginSingUp.tsx";
 
 const Home = () => {
   const [events, setEvents] = useState<Event[]>([]);
@@ -40,12 +41,13 @@ const Home = () => {
 
   return (
     <>
-    <div className="home__description-title">
-      <p>
-        Welcome to our Youth Center. We offer various programs and activities to help young people grow,
-          learn, and thrive. Explore our events, activities, and community programs.
-      </p>
-    </div>
+      <div className="home__description-title">
+        <p>
+          Welcome to our Youth Center. We offer various programs and activities
+          to help young people grow, learn, and thrive. Explore our events,
+          activities, and community programs.
+        </p>
+      </div>
       <div className="event-grid">
         {events.map((event, index) => (
           <EventCard
@@ -55,8 +57,7 @@ const Home = () => {
             users={[]}
           />
         ))}
-
-    </div>
+      </div>
     </>
   );
 };
