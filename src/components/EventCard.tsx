@@ -31,7 +31,6 @@ const EventCard = ({ event, updateParticipants }: EventCardProps) => {
           <UserIcons users={participants} />
         </div>
       </div>
-
       <BookingModal
         open={open}
         onClose={handleClose}

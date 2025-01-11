@@ -4,21 +4,33 @@ import "../styles/login-sing-up.scss";
 // import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 // import LockIcon from "@mui/icons-material/Lock";
 
+interface LoginSignUpProps {
+  isSignUp: boolean;
+  onClose: () => void;
+}
 
-const AuthForm: React.FC = () => {
-  const [isSignUp, setIsSignUp] = useState(false);
-  const [formData, setFormData] = useState({ email: "", password: "", confirmPassword: "" });
+const AuthForm: React.FC<LoginSignUpProps> = ({ isSignUp, onClose }) => {
+  /*const [isSignUp, setIsSignUp] = useState(false);*/
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
   const [error, setError] = useState<string | null>(null);
+  const [isSignUpMode, setIsSignUpMode] = useState(isSignUp);
 
   const toggleForm = () => {
-    setIsSignUp(!isSignUp);
+   /* setIsSignUp(!isSignUp);*/
     setFormData({ email: "", password: "", confirmPassword: "" });
     setError(null);
+    setIsSignUpMode(!isSignUpMode);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    console.log(isSignUpMode ? "Sign Up Submitted" : "Login Submitted");
+    onClose();
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -35,13 +47,25 @@ const AuthForm: React.FC = () => {
 
   return (
     <div className="auth-container">
-      <h2>{isSignUp ? "Sign Up" : "Sign In"}</h2>
+      <h2>{isSignUpMode ? "Sign Up" : "Login"}</h2>
       <form className="auth-form" onSubmit={handleSubmit}>
         <label>Email</label>
-        <input type="email" name="email" value={formData.email} onChange={handleInputChange} required />
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          required
+        />
 
         <label>Password</label>
-        <input type="password" name="password" value={formData.password} onChange={handleInputChange} required />
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleInputChange}
+          required
+        />
 
         {isSignUp && (
           <>
@@ -58,10 +82,13 @@ const AuthForm: React.FC = () => {
 
         {error && <p className="error-message">{error}</p>}
 
-        <button type="submit">{isSignUp ? "Sign Up" : "Sign In"}</button>
+        <button type="submit">{isSignUpMode ? "Sign Up" : "Login"}</button>
       </form>
-      <button className="toggle-btn" onClick={toggleForm}>
-        {isSignUp ? "Already have an account? Sign In" : "Don't have an account? Sign Up"}
+      <button onClick={toggleForm}>
+        {isSignUpMode ? "Switch to Login" : "Switch to Sign Up"}
+      </button>
+      <button onClick={onClose} style={{ marginTop: "10px" }}>
+        Close
       </button>
     </div>
   );
