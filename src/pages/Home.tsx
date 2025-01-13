@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import EventCard from "../components/EventCard.tsx";
 import axios from "axios";
 import { Event } from "../types/event.ts";
-// import LoginSingUp from "../components/LoginSingUp.tsx";
+import OpenModalSingIn from "../components/OpenModalSingIn.tsx"
 
 const Home = () => {
   const [events, setEvents] = useState<Event[]>([]);
@@ -57,7 +57,9 @@ const Home = () => {
             users={[]}
           />
         ))}
+
       </div>
+      <OpenModalSingIn/>
     </>
   );
 };

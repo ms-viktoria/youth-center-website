@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "../styles/login-sing-up.scss";
-// import MailIcon from "@mui/icons-material/Mail";
-// import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-// import LockIcon from "@mui/icons-material/Lock";
 
 interface LoginSignUpProps {
   isSignUp: boolean;
@@ -11,6 +8,7 @@ interface LoginSignUpProps {
 
 const AuthForm: React.FC<LoginSignUpProps> = ({ isSignUp, onClose }) => {
   /*const [isSignUp, setIsSignUp] = useState(false);*/
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
